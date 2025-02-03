@@ -512,7 +512,65 @@
 
     </span>
 
-
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Download Book Button</title>
+      <style>
+        /* Button Styling */
+        .download-btn {
+          background-color: #4CAF50; /* Green */
+          border: none;
+          color: white;
+          padding: 12px 24px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          font-weight: bold;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+    
+        .download-btn:hover {
+          background-color: #45a049;
+          transform: scale(1.05);
+        }
+    
+        .download-btn:active {
+          background-color: #3e8e41;
+          transform: scale(0.95);
+        }
+      </style>
+    </head>
+    <body>
+      <div style="text-align: center; margin-top: 50px;">
+        <button class="download-btn" onclick="downloadBook()">Download Book</button>
+      </div>
+    
+      <script>
+        function downloadBook() {
+          // Specify the file URL
+          const fileUrl = "file:///C:/Users/admin.DESKTOP-P749VNL/Downloads/graphic%20design%20book%20.pdf"; // Replace with your file URL
+          const fileName = "My_Book.pdf"; // Specify the file name for download
+    
+          // Create an anchor element to trigger the download
+          const a = document.createElement("a");
+          a.href = fileUrl;
+          a.download = fileName;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+    
+          // Optional: Alert the user
+          alert("Your book is downloading!");
+        }
+      </script>
+    </body>
+    </html>
 
 
 
