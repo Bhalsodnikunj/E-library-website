@@ -107,7 +107,7 @@
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       width: 100%;
-      height: 510px;
+      height: 636px;
     }
     h1 {
       text-align: center;
@@ -152,7 +152,7 @@
 </head>
 <body>
   <div class="security-container">
-    <h1>admin Security Login</h1>
+    <h1>Admin Security Login</h1>
     <!-- Login Form -->
     <input type="text" id="username" class="input-field" placeholder="Username" />
     <input type="password" id="password" class="input-field" placeholder="Password" />
@@ -171,7 +171,7 @@
       const messageElement = document.getElementById('message');
 
       // Check if the username and password match (simulating a basic check)
-      if (username === 'E-L' && password === '123456') {
+      if (username === 'admin' && password === '123456') {
         // Successful login, redirect to a secure page
         messageElement.textContent = 'Login successful! Redirecting...';
         messageElement.classList.remove('error');
