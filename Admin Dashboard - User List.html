@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin Dashboard - User List</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<nav class="navbar navbar-inverse">
+
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index2.html">E-library</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index2.html">Home</a></li>
+        <li><a href="Book Categories table.html">Book Categories</a></li>
+        <li><a href="User Book Interaction.html">User Book Interaction</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+
+
+    </div>
+  </div>
+</nav>
+
+
+
+<body>
+
+
+<div class="container">
+    <h2>Admin Dashboard - User List</h2>
+
+    <!-- Add User Form -->
+    <div class="form-container">
+        <h3>Add New User</h3>
+        <form action="add_user.php" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Role</label>
+                <input type="text" id="role" name="role" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-dark">Add User</button>
+        </form>
+    </div>
+
+    <!-- User List -->
+    <div class="user-list">
+        <h3>User List</h3>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+                    <tr>
+                        <td><?= htmlspecialchars($row['name']) ?></td>
+                        <td><?= htmlspecialchars($row['email']) ?></td>
+                        <td><?= htmlspecialchars($row['role']) ?></td>
+                    </tr>
+              
+            </tbody>
+        </table>
+    </div>
+</div>
+<footer>
+  <div class="footer-container">
+      <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>Your e-library for unlimited learning. Access a wide range of books and resources.</p>
+      </div>
+      <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Catalog</a></li>
+              <li><a href="#">Membership</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </div>
+      <div class="footer-section contact">
+          <h2>Contact Us</h2>
+          <p>Email: support@elibrary.com</p>
+          <p>Phone: +123 456 7890</p>
+      </div>
+      <div class="footer-section social">
+          <h2>Follow Us</h2>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2025 E-Library. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+      background: #000000;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+  }
+  .footer-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 20px;
+  }
+  .footer-section {
+      flex: 1;
+      margin: 10px;
+  }
+  .footer-section h2 {
+      margin-bottom: 10px;
+  }
+  .footer-section ul {
+      list-style: none;
+      padding: 0;
+  }
+  .footer-section ul li {
+      margin: 5px 0;
+  }
+  .footer-section ul li a {
+      color: white;
+      text-decoration: none;
+  }
+  .footer-section a i {
+      font-size: 20px;
+      margin: 5px;
+      color: white;
+  }
+  .footer-bottom {
+      background: #000000;
+      padding: 10px;
+      margin-top: 10px;
+  }
+</style>
+
+
+</body>
+</html>
