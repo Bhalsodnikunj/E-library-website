@@ -59,7 +59,7 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    width: 900px;
+    width: 100%;
 }
 
 h2 {
@@ -100,6 +100,56 @@ button:hover {
     background-color: #0c0c0c;
 }
 
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow-x: auto;
+            display: block;
+            white-space: nowrap;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        .fav-btn {
+            background-color: gold;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        form label, form input, form select, form button {
+            flex: 1 1 200px;
+            padding: 5px;
+        }
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            tr {
+                margin-bottom: 10px;
+            }
+            td {
+                text-align: right;
+                position: relative;
+                padding-left: 50%;
+            }
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                text-align: left;
+                font-weight: bold;
+            }
+        }
+
+
+
       </style>
       <script>
           function markFavorite(btn) {
@@ -109,7 +159,7 @@ button:hover {
       </script>
   </head>
   <body>
-      <h2>User Book Interaction Table</h2>
+      <h2>User Book Interaction </h2>
       <form action="User Book Interaction Table.php" method="post">
       <form>
           <label for="userId">User ID:</label>
@@ -138,51 +188,6 @@ button:hover {
       
     </div>
     
-
-  <footer>
-    <div class="footer-container">
-        
-      
-    <div class="footer-bottom">
-        <p>&copy; 2025 E-Library. All Rights Reserved.</p>
-    </div>
-  </footer>
   
-  <style>
-    footer {
-        background: #000000;
-        color: white;
-        padding: 20px 0;
-        text-align: center;
-    }
-
-  
-    .footer-section h2 {
-        margin-bottom: 10px;
-    }
-    .footer-section ul {
-        list-style: none;
-        padding: 0;
-    }
-    .footer-section ul li {
-        margin: 5px 0;
-    }
-    .footer-section ul li a {
-        color: white;
-        text-decoration: none;
-    }
-    .footer-section a i {
-        font-size: 20px;
-        margin: 5px;
-        color: white;
-    }
-    .footer-bottom {
-        background: #000000;
-        padding: 10px;
-        margin-top: 10px;
-    }
-  </style>
-  
-
     </body>
 </html>
