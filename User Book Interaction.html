@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>User Book Interaction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">E-library</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Book Categories table.html">Book Categories</a></li>
+          <li><a href="User Book Interaction.html">User Book Interaction</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="Registration.html"><span class="glyphicon glyphicon-user"></span> Registration</a></li>
+          <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <div class="container mt-5">
+      <title>User Book Interaction</title>
+      <style>
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #030303;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0c0c0c;
+}
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            overflow-x: auto;
+            display: block;
+            white-space: nowrap;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+        .fav-btn {
+            background-color: gold;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        form label, form input, form select, form button {
+            flex: 1 1 200px;
+            padding: 5px;
+        }
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            tr {
+                margin-bottom: 10px;
+            }
+            td {
+                text-align: right;
+                position: relative;
+                padding-left: 50%;
+            }
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 10px;
+                text-align: left;
+                font-weight: bold;
+            }
+        }
+
+      </style>
+      <script>
+          function markFavorite(btn) {
+              btn.innerText = "★ Favorite";
+              btn.style.backgroundColor = "orange";
+          }
+      </script>
+  </head>
+  <body>
+      <h2>User Book Interaction </h2>
+      <form action="User Book Interaction Table.php" method="post">
+      <form>
+          <label for="userId">User ID:</label>
+          <input type="text" id="userId" name="userId" required>
+          
+          <label for="bookId">Book ID:</label>
+          <input type="text" id="bookId" name="bookId" required>
+          
+          <label for="bookTitle">Book Title:</label>
+          <input type="text" id="bookTitle" name="bookTitle" required>
+          
+          <label for="borrowDate">Borrow Date:</label>
+          <input type="date" id="borrowDate" name="borrowDate" required>
+          
+          <label for="returnDate">Return Date:</label>
+          <input type="date" id="returnDate" name="returnDate" required>
+          
+          <label for="status">Status:</label>
+          <select id="status" name="status" required>
+              <option value="Borrowed">Borrowed</option></br>
+              <option value="Returned">Returned</option></br>
+          </select>
+      
+          <button type="submit">Add Entry </button>
+      </form>
+      
+    </div>
+    </body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Book Categories table </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index2.html">E-library</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index2.html">Home</a></li>
+          <li><a href="Book Categories table.html">Book Categories</a></li>
+          <li><a href="User Book Interaction.html">User Book Interaction</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Contact.html">Contact</a></li> 
+   </ul>
+          <style>
+  /* Container for the contact form */
+  .container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(19, 18, 18, 0.1);
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #060707; /* Blue heading */
+    text-align: center; /* Center the title */
+  }
+  
+  /* Input fields styling */
+  input[type="text"], input[type="email"], input[type="text"], textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #161616; /* Blue border on focus */
+    outline: none;
+  }
+  
+  /* Textarea for message */
+  textarea {
+    height: 150px;
+    resize: none; /* Prevent resizing of the textarea */
+  }
+  
+  /* Button styling */
+  button {
+    width: 100%;
+    background-color: #000000; /* Blue button */
+    color: white;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #02020269; /* Darker blue on hover */
+  }
+</style>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="Registration.html"><span class="glyphicon glyphicon-user"></span> Registration</a></li>
+          <li><a href="login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a href="user profile edit .html"><span class="glyphicon glyphicon-log-in"></span> profile edit </a></li>
+          <li><a href="user log out.html"><span class="glyphicon glyphicon-log-in"></span> user logout</a></li>
+          
+          <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+<body>
+    <div class="container mt-5">
+        <h1>Add a New Category</h1>
+        <form action="insert_category.php" method="POST">
+            <div class="mb-3">
+                <label for="category_name" class="form-label">Category Name</label>
+                <input type="text" class="form-control" id="category_name" name="category_name" required>
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="number_items" class="form-label">Number & Items</label>
+                <input type="number" class="form-control" id="number_items" name="number_items" required>
+            </div>
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label><br>
+                <select class="form-select" id="status" name="status" required>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+            </div>
+            <button class="login-button" id="loginBtn">Add Category</button>
+        </form>
+    </div>
+</body>
+</html>
+<footer>
+  <div class="footer-container">  
+  <div class="footer-bottom">
+      <p>&copy; 2025 E-Library. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+      background: #000000;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+  }
+
+
+  .footer-section h2 {
+      margin-bottom: 10px;
+  }
+  .footer-section ul {
+      list-style: none;
+      padding: 0;
+  }
+  .footer-section ul li {
+      margin: 5px 0;
+  }
+  .footer-section ul li a {
+      color: white;
+      text-decoration: none;
+  }
+  .footer-section a i {
+      font-size: 20px;
+      margin: 5px;
+      color: white;
+  }
+  .footer-bottom {
+      background: #000000;
+      padding: 10px;
+      margin-top: 10px;
+  }
+</style>
+</body>
+</html>
